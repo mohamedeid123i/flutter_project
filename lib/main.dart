@@ -15,11 +15,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return  MaterialApp(
       routes: {
-        "welcome" : (context) => Welcome(),
-        "login" : (context) => Login(),
-        "signup" : (context) => Signup(),
+        "welcome" : (context) => const Welcome(),
+        "login" : (context) => const Login(),
+        "signup" : (context) => const Signup(),
       },
-      home: Welcome(),
+      home: const Welcome(),
       debugShowCheckedModeBanner: false,
     );
   }
@@ -37,20 +37,11 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // floatingActionButton: FloatingActionButton(
-      //   onPressed: () {
-      //     // Add functionality for the floating action button
-      //     print("Floating Action Button Pressed!");
-      //   },
-      //   backgroundColor: Colors.blue,
-      //   child: const Icon(Icons.add, color: Colors.white),
-      // ),
       appBar: AppBar(
-        elevation: 0, // Reduced elevation for a cleaner look
+        elevation: 0,
         centerTitle: true,
         leading: IconButton(
           onPressed: () {
-            // Add functionality for the leading icon
             print("Leading Icon Pressed!");
           },
           icon: const Icon(Icons.list, color: Colors.black, size: 35),
@@ -67,14 +58,14 @@ class _MyHomePageState extends State<MyHomePage> {
         actions: [
           IconButton(
             onPressed: () {
-              // Add functionality for the message icon
+
               print("Message Icon Pressed!");
             },
             icon: const Icon(Icons.message, color: Colors.blue),
           ),
           IconButton(
             onPressed: () {
-              // Add functionality for the search icon
+
               print("Search Icon Pressed!");
             },
             icon: const Icon(Icons.search, color: Colors.blue),
@@ -86,148 +77,6 @@ class _MyHomePageState extends State<MyHomePage> {
           child: Column(
             //crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              // Top Container
-              // Container(
-              //   padding: const EdgeInsets.symmetric(vertical: 50, horizontal: 20),
-              //   height: 200,
-              //   width: double.infinity,
-              //   decoration: BoxDecoration(
-              //     color: Colors.black.withOpacity(.2),
-              //     borderRadius: BorderRadius.circular(20),
-              //   ),
-              //   child: const Center(
-              //     child: Text(
-              //       "Items",
-              //       style: TextStyle(fontSize: 30),
-              //     ),
-              //   ),
-              // ),
-              // const SizedBox(height: 20), // Spacer
-              //
-              // // Horizontal Scrollable Row
-              // Wrap(
-              //   spacing: 10,
-              //     runSpacing: 10,
-              //     alignment: WrapAlignment.spaceEvenly,
-              //     direction: Axis.horizontal,
-              //     children: List.generate(names.length,
-              //           (index) => Container(
-              //             height: 100,
-              //             width: 70,
-              //             child: ElevatedButton(
-              //               onPressed: (){},
-              //               style: ButtonStyle(
-              //                 backgroundColor: MaterialStateProperty.all(Colors.deepOrangeAccent),
-              //                shape:  MaterialStateProperty.all(RoundedRectangleBorder(borderRadius: BorderRadius.circular(20))),
-              //               ), child: Center(
-              //             child: Text(
-              //               names[index].toString(), // Correctly calling toString()
-              //             ),
-              //                                 ),
-              //             ),
-              //           ),
-              //     ),
-              //   ),
-              // //const SizedBox(height: 20), // Spacer
-              // // Bottom Container
-              // Container(
-              //   height: 400,
-              //   width: double.infinity,
-              //   color: Colors.grey[200],
-              //   child: const Center(
-              //     child: Text(
-              //       "Additional Content",
-              //       style: TextStyle(fontSize: 24),
-              //     ),
-              //   ),
-              // ),
-              // SizedBox(height: 100,),
-              //
-              // Container(
-              //   height: 300,
-              //   width: 350,
-              //   color: Colors.grey,
-              //   child: Stack(
-              //     children: [
-              //       Positioned(
-              //         top : 0,
-              //         right: 0,
-              //           child: Container(
-              //             alignment: Alignment.center,
-              //             color: Colors.red,
-              //             height: 110,
-              //             width: 100,
-              //             child: Text("dfhggfdh"),
-              //           )
-              //       ),
-              //       Positioned(
-              //           child: Container(
-              //             alignment: Alignment.center,
-              //             color: Colors.blue,
-              //             height: 100,
-              //             width: 100,
-              //             child: Text("dfhggfdh"),
-              //           )
-              //       ),
-              //
-              //       Center(
-              //         child: Container(
-              //           alignment: Alignment.center,
-              //           color: Colors.green,
-              //           height: 150,
-              //           width: 150,
-              //           child: Text("dfhggfdh"),
-              //         ),
-              //       ),
-              //
-              //     ],
-              //   ),
-              // ),
-              // Container(
-              //   padding: EdgeInsets.all(20),
-              //   color: Colors.blue[200],
-              //   height: 350,
-              //   width: 200,
-              //   child: Center(
-              //     child: Wrap(
-              //       spacing: 10,
-              //       runSpacing: 10,
-              //       alignment: WrapAlignment.spaceEvenly,
-              //       direction: Axis.horizontal,
-              //       children: List.generate(names.length,
-              //             (index) => Container(
-              //           height: 100,
-              //           width: 70,
-              //           child: ElevatedButton(
-              //             onPressed: (){},
-              //             style: ButtonStyle(
-              //               backgroundColor: MaterialStateProperty.all(Colors.orange),
-              //               shape:  MaterialStateProperty.all(RoundedRectangleBorder(borderRadius: BorderRadius.circular(20))),
-              //             ), child: Center(
-              //             child: Text(
-              //               names[index].toString(),
-              //               style: TextStyle(
-              //                 fontSize: 25
-              //               ),// Correctly calling toString()
-              //             ),
-              //           ),
-              //           ),
-              //         ),
-              //       ),
-              //     ),
-              //
-              //   ),
-              // ),
-              // SizedBox(height: 150,),
-              // Container(
-              //   padding: EdgeInsets.all(15),
-              //   decoration: BoxDecoration(
-              //     shape: BoxShape.circle,
-              //     border:Border.all(color: Colors.blue,width: 2)
-              //   ),
-              //   child: SvgPicture.asset("assets/imgs/facebook.svg",
-              //   color: Colors.blue[600],height: 80,width: 50,),
-              // )
               Container(
                 height: 50,
                 width: 250,
@@ -235,8 +84,8 @@ class _MyHomePageState extends State<MyHomePage> {
                   color: Colors.purple[200],
                   borderRadius: BorderRadius.circular(50)
                 ),
-                padding: EdgeInsets.all(15),
-                child: TextField(
+                padding: const EdgeInsets.all(15),
+                child: const TextField(
                   textInputAction: TextInputAction.next,
                   keyboardType: TextInputType.emailAddress,
                   decoration: InputDecoration(
@@ -249,7 +98,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
                 ),
               ),
-              SizedBox(height: 20,),
+              const SizedBox(height: 20,),
               Container(
                 height: 50,
                 width: 250,
@@ -257,8 +106,8 @@ class _MyHomePageState extends State<MyHomePage> {
                     color: Colors.purple[200],
                     borderRadius: BorderRadius.circular(50)
                 ),
-                padding: EdgeInsets.all(15),
-                child: TextField(
+                padding: const EdgeInsets.all(15),
+                child: const TextField(
                   textInputAction: TextInputAction.done,
                   decoration: InputDecoration(
                     prefixIcon: Icon(Icons.lock,size: 25,color: Colors.purple,),
@@ -270,7 +119,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
                 ),
               ),
-             SizedBox(height: 20,),
+             const SizedBox(height: 20,),
              Container(
                //padding: EdgeInsets.all(20),
                decoration: BoxDecoration(
@@ -279,7 +128,7 @@ class _MyHomePageState extends State<MyHomePage> {
                ),
                height: 50,
                width: 250,
-               child: TextButton(onPressed: (){}, child: Text("login",style: TextStyle(color: Colors.white,fontSize: 20),)),
+               child: TextButton(onPressed: (){}, child: const Text("login",style: TextStyle(color: Colors.white,fontSize: 20),)),
              )
             ],
           ),
